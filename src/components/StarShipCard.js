@@ -1,10 +1,17 @@
 
-function StarShipCard() {
+function StarShipCard(props) {
+
+  const {starShips} = props;
+
   return (
     <div>
-      <h2>Star Ship Card</h2>
+       { starShips ? (
+          starShips.map((item) => <h3>{item.name}</h3>)
+      ) : ( <h3>No Ships found</h3>
+      )}
     </div>
-  )
+    )
+  
 };
 
 export default StarShipCard;

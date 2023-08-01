@@ -12,17 +12,15 @@ function App() {
       const res = await fetch('https://swapi.dev/api/starships/');
       // const data = await res.json().results;
       const data = await res.json()
-      setStarships(data);
+      setStarships(data.results);
     }
     fetchData();
   }, []);
 
-  console.log(starShips);
-
   return (
     <div className="App">
-      <h1>Star Wars App</h1>
-      <StarShipCard />
+      <h1>Star Wars Star Ships</h1>
+      <StarShipCard starShips={starShips}/>
     </div>
   );
 }
