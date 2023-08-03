@@ -1,13 +1,12 @@
-
 function StarShipCard(props) {
 
   const {starShips} = props;
 
   return (
-    <div>
+    <div className='container'>
        { starShips ? (
-          starShips.map((item) => <h3>{item.name}</h3>)
-      ) : ( <h3>No Ships found</h3>
+          starShips.map((item) => <div className='ship'>{item.name}</div>)
+      ) : ( <div className='ship'>No Ships found</div>
       )}
     </div>
     )

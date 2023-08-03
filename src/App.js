@@ -10,7 +10,6 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch('https://swapi.dev/api/starships/');
-      // const data = await res.json().results;
       const data = await res.json()
       setStarships(data.results);
     }
@@ -19,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Star Wars Star Ships</h1>
+      <h1>Star Wars Starhips</h1>
       <StarShipCard starShips={starShips}/>
     </div>
   );
